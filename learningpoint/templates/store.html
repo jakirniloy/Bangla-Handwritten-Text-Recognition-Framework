@@ -1,0 +1,115 @@
+{% extends 'base.html'%}
+{% load static%}
+
+{% block content %}
+
+<style>
+    .copyable {
+  cursor: pointer;
+  user-select: all;
+}
+</style>
+<!-- ========================= SECTION PAGETOP ========================= -->
+
+
+<div class="container">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="border-end bg-white" id="sidebar-wrapper">
+                <div class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'index'%}">Home</a>
+                    <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'notes'%}">My Notes</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'mylibrary'%}">My Library</a> -->
+                    <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'upload'%}">Upload</a> -->
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'lstore'%}">Predict Your Handwriting</a>
+                    <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="{% url 'blog'%}">My Post</a>  -->
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3 border-right">
+                                 
+    <!-- <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="image">
+        <div class="col-md-7 p-10">
+            <button type="submit" class="btn btn-sm btn-primary" >Detect Text
+        </div> -->
+        <!-- <button type="submit">Detect Text</button> -->
+    <!-- </form>
+    <h1>Detected Text:</h1>
+    <p>{{ text }}</p>
+                            </div>
+                            
+                            
+                        </div> -->
+                        <!-- <hr>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <form method="POST">
+                                    {% csrf_token %}
+                                   
+                                  <div class="form-group row">
+                                    <label for="text" class="col-12 col-form-label">upload your image here</label> 
+                                    <div class="col-12">
+                                        <input type="file" name="image" required="required">
+                                        <div class="">
+                                            <button type="submit" class="btn btn-sm btn-primary " >Post</button>
+                                        </div>
+                                        </form>
+                                        {% if text %}
+                                            <h2>Recognized Text:</h2>
+                                            <p>{{ text }}</p>
+                                        {% endif %}
+                                    </div>
+                                  </div>
+                                  <!-- <div class="form-group row"> -->
+                                    <!-- <label for="textarea" class="col-12 col-form-label">Your problem</label> 
+                                    <div class="col-12">
+                                      <textarea id="textarea" name="qustionDescription" cols="40" rows="5" class="form-control"></textarea>
+                                    </div>
+                                  </div>  --> 
+                               
+                            </div>
+                       
+                            
+                        </div>
+
+<!-- ========================= SECTION INTRO END// ========================= -->
+
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-content padding-y">
+    <main class="col-md-9">
+    
+
+
+
+    
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" class="form-control" name="image" >
+        <br>
+        <br>
+        <button class="btn btn-sm btn-primary p-10" type="submit">Detect Text</button>
+    </form>
+    <br>
+        <br>
+    <h1 class="col-auto font-thin fa-bookmark">Detected Text:</h1>
+    <p class=" copyable font-black">{{ text }}</p>
+
+  
+</div>
+
+</div> <!-- container .//  -->
+</section>
+<!-- ========================= SECTION CONTENT END// ========================= -->
+
+
+
+
+
+</body>
+</html>
+{% endblock %}

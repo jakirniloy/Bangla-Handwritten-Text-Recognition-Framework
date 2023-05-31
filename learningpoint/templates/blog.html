@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bangla Handwritten Text Recognition with OCR</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" id="upload-form">
+        {% csrf_token %}
+        <label for="image">Upload an image:</label>
+        <input type="file" name="image" id="image" required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="results"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#upload-form').submit(function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+            $.ajax({
+                type: 'POST',
+                url: '{% url "recognize_bangla_words" %}',
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function(response) {
+                    $('#results').html('<p>Recognized words:</p><ul></ul>');
+                    for (var i = 0; i < response.results.length; i++) {
+                        $('#results ul').append('<li>' + response.results[i] + '</li>');
+                    }
+                    $('#results').append('<img src="' + response.image_url + '">');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

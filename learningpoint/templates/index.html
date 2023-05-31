@@ -1,0 +1,421 @@
+
+<style>
+  
+   .row.heading h2 {
+       color: #fff;
+       font-size: 52.52px;
+       line-height: 95px;
+       font-weight: 400;
+       text-align: center;
+       margin: 0 0 40px;
+       padding-bottom: 20px;
+       text-transform: uppercase;
+   }
+   ul{
+     margin:0;
+     padding:0;
+     list-style:none;
+   }
+   .heading.heading-icon {
+       display: block;
+   }
+   .padding-lg {
+      display: block;
+      padding-top: 60px;
+      padding-bottom: 60px;
+   }
+   .practice-area.padding-lg {
+       padding-bottom: 55px;
+       padding-top: 55px;
+   }
+   .practice-area .inner{ 
+        border:1px solid #999999; 
+       text-align:center; 
+       margin-bottom:28px; 
+       padding:40px 25px;
+   }
+   .our-webcoderskull .cnt-block:hover {
+       box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+       border: 0;
+   }
+   .practice-area .inner h3{ 
+       color:#3c3c3c; 
+      font-size:24px; 
+      font-weight:500;
+      font-family: 'Poppins', sans-serif;
+      padding: 10px 0;
+   }
+   .practice-area .inner p{ 
+       font-size:14px; 
+      line-height:22px; 
+      font-weight:400;
+   }
+   .practice-area .inner img{
+      display:inline-block;
+   }
+   
+   
+   .our-webcoderskull{
+     background: url("https://img.freepik.com/free-vector/blue-cyber-future-technology-concept-background_42077-488.jpg?size=626&ext=jpg") no-repeat center top / cover;
+     
+   }
+   .our-webcoderskull .cnt-block{ 
+      float:left; 
+      width:100%; 
+      background:#fff; 
+      padding:30px 20px; 
+      text-align:center; 
+      border:2px solid #d5d5d5;
+      margin: 0 0 28px;
+   }
+   .our-webcoderskull .cnt-block figure{
+      width:148px; 
+      height:148px; 
+      border-radius:100%; 
+      display:inline-block;
+      margin-bottom: 15px;
+   }
+   .our-webcoderskull .cnt-block img{ 
+      width:148px; 
+      height:148px; 
+      border-radius:100%; 
+   }
+   .our-webcoderskull .cnt-block h3{ 
+      color:#2a2a2a; 
+      font-size:20px; 
+      font-weight:500; 
+      padding:6px 0;
+      text-transform:uppercase;
+   }
+   .our-webcoderskull .cnt-block h3 a{
+     text-decoration:none;
+      color:#2a2a2a;
+   }
+   .our-webcoderskull .cnt-block h3 a:hover{
+      color:#337ab7;
+   }
+   .our-webcoderskull .cnt-block p{ 
+      color:#2a2a2a; 
+      font-size:13px; 
+      line-height:20px; 
+      font-weight:400;
+   }
+   .our-webcoderskull .cnt-block .follow-us{
+      margin:20px 0 0;
+   }
+   .our-webcoderskull .cnt-block .follow-us li{ 
+       display:inline-block; 
+      width:auto; 
+      margin:0 5px;
+   }
+   .our-webcoderskull .cnt-block .follow-us li .fa{ 
+      font-size:24px; 
+      color:#767676;
+   }
+   .our-webcoderskull .cnt-block .follow-us li .fa:hover{ 
+      color:#025a8e;
+   }
+   
+   </style>
+  
+   {% extends 'base.html'%}
+   {% load static%}
+   {% block content %}
+   {% if request.session.Email %}
+   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <!------ Include the above in your HEAD tag ---------->
+   
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="lg:flex ">
+   <div class="lg:w-1/2 xl:max-w-screen-sm ">
+       <div class="py-12  lg:bg-white flex justify-center lg:justify-start lg:px-12">
+           <div class="cursor-pointer flex items-center">
+               <div>
+                   
+               </div>
+               
+           </div>
+       </div>
+      
+       <div class="mt-10 px-12 py-5 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+           <!-- <h2 class=" text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
+           xl:text-bold">Hey!!{{UserDetails.username}}</h2> -->
+           <div class="mt-12">
+               <form class="POST">
+                 <div class=" text-6xl font-display font-semibold text-gray-700 ">
+                  আপনার জ্ঞান বাড়াতে আপনাকে সাহায্য করার জন্য আমাদের হৃদয়ে সর্বোত্তম উদ্দেশ্য রয়েছে.
+               </div>
+               <div class="mt-10">
+                                
+                  <a   class="bg-indigo-500 text-gray-100 p-3  w-full rounded-full tracking-wide
+                  font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
+                  shadow-lg"  href="{% url 'lstore'%}">Get Started </a>  
+                  <!-- {% url 'lstore'%}  -->
+
+              
+           </div>
+                  
+               </form>
+               
+           </div>
+       </div>
+       
+   </div>
+   <div class="hidden lg:flex items-center justify-center bg-indigo-80 flex-1 h-screen">
+       <div class="max-w-xs transform duration-200 hover:scale-110 cursor-pointer">
+           <img src="{% static 'users/css/img/hero-img.png' %}" class="image max-w-screen-sm" alt="" c />
+       </div>
+
+       <div class="mt-10">
+                                
+                                   <a   class="bg-indigo-500 text-gray-100 p-3  w-full rounded-full tracking-wide
+                                   font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
+                                   shadow-lg"  href="{% url 'Reg'%}">Registration</a>  
+
+                               
+                            </div>
+   </div>
+</div>
+{% else %}
+        <div class="lg:flex ">
+            <div class="lg:w-1/2 xl:max-w-screen-sm">
+                
+                <div class="mt-10 px-12 py-5 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
+                    <h2 class=" text-4xl text-indigo-900 font-display font-semibold lg:text-left xl:text-5xl
+                    xl:text-bold">আপনার জ্ঞান বাড়াতে আপনাকে সাহায্য করার জন্য আমাদের হৃদয়ে সর্বোত্তম উদ্দেশ্য রয়েছে</h2>
+                    <div class="mt-12">
+                        <form class="POST">
+                          <div class="mt-12 text-sm font-display font-semibold text-gray-700 ">
+                          
+                        </div>
+                        
+                            <div class="mt-10">
+                                
+                                   <a   class="bg-indigo-500 text-gray-100 p-3  w-full rounded-full tracking-wide
+                                   font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-indigo-600
+                                   shadow-lg"  href="{% url 'Reg'%}">Get Started </a>  
+
+                               
+                            </div>
+                           
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center justify-center bg-indigo-80 flex-1 h-screen">
+                <div class="max-w-xs transform duration-200 hover:scale-110 cursor-pointer">
+                    <img src="{% static 'users/css/img/hero-img.png' %}" class="image max-w-screen-sm" alt="" c />
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        <!-- three_box  -->
+    <!-- <div id="service" class="three_box ">
+        <div class="container">
+           <div class="row">
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                 <div class="Soft-box">
+                    
+                    <i><img src="{% static 'img/service1.png' %}" alt="#" /></i>
+                    <h3> Software</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable contentt has a more-or-less norf letters,</p>
+                 </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                 <div class="Soft-box">
+                    <i><img src="{% static 'img/service2.png' %}" alt="#" /></i>
+                    <h3>For Mobile</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable contentt has a more-or-less norf letters,</p>
+                 </div>
+              </div>
+              <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                 <div class="Soft-box">
+                    <i><img src="{% static 'img/service3.png' %}" alt="#" /></i>
+                    <h3>For Computer</h3>
+                    <p>It is a long established fact that a reader will be distracted by the readable contentt has a more-or-less norf letters,</p>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div> -->
+     <!-- end three_box -->
+   
+    <!-- Asked -->
+    
+<section class="our-webcoderskull padding-lg align-middle">
+   <div class="container">
+     <div class="row heading heading-icon">
+         <h2>Our Team</h2>
+     </div>
+     <ul class="row ">
+       <li class="col-12 col-md-6 col-lg-3 mx-16">
+           <div class="cnt-block equal-hight" style="height: 349px;">
+             <figure><img src="https://3.bp.blogspot.com/-P_qMx1hPnBM/YEpv_kbsiqI/AAAAAAAA2p0/mJ1TPJR4gKgZB3UhYQmZF5W4UjR9usYPwCK4BGAYYCw/s1600/52286661_2792678240957593_1876677421592215552_o.jpg" class="img-responsive" alt=""></figure>
+             <h3><a href="">MD Jakir Hossain</a></h3>
+             <p>Web Developer</p>
+             <ul class="follow-us clearfix">
+               <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+             </ul>
+           </div>
+       </li>
+       <li class="col-12 col-md-6 col-lg-3 max-16">
+           <div class="cnt-block equal-hight" style="height: 349px;">
+             <figure><img src="https://scontent.fdac99-1.fna.fbcdn.net/v/t39.30808-6/330554312_959629685071017_8166422367709964964_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeEqjwEulPnSmbVTofYO6s26BAF5b1M0qPMEAXlvUzSo87s5Kxgx1jkGqtmaFahQaR4k2vpmRC7Y8myvQtpzaQok&_nc_ohc=UB6TAjxELfcAX9AL77B&_nc_ht=scontent.fdac99-1.fna&oh=00_AfAO4gP5qtVqc6_rjmTLVU6yGfwQVUfGRfrLSymMTogvrg&oe=6416779D" class="img-responsive" alt=""></figure>
+             <h3><a href="#">Sarah Samiha zaman </a></h3>
+             <p>Web Developer</p>
+             <ul class="follow-us clearfix">
+               <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+             </ul>
+           </div>
+       </li>
+       <li class="col-12 col-md-6 col-lg-3 mx-16">
+           <div class="cnt-block equal-hight" style="height: 349px;">
+             <figure><img src="https://scontent.fdac99-1.fna.fbcdn.net/v/t39.30808-6/316806418_1785900501772002_8266221215294119428_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=174925&_nc_eui2=AeFQ_36jS3WafLKcXV1HOFcKD32-a3NKu1YPfb5rc0q7VubwhzUkn3kVmLAJln-zMm779-g9XYzFyb_8yK6A47vP&_nc_ohc=1ifCpvPet30AX9-Yk8w&_nc_ht=scontent.fdac99-1.fna&oh=00_AfA53fAiRIgbH70jb9xj5yfaFv1-xMs6JhgsQ3i9aEnqBA&oe=6416FFFF" class="img-responsive" alt=""></figure>
+             <h3><a href="">Fardin Rahman Akash</a></h3>
+             <p>Web Developer</p>
+             <ul class="follow-us clearfix">
+               <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+               <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+             </ul>
+           </div>
+        </li>
+
+        <li class="col-12 col-md-6 col-lg-3 mx-16">
+         <div class="cnt-block equal-hight" style="height: 349px;">
+           <figure><img src="https://scontent.fdac99-1.fna.fbcdn.net/v/t39.30808-6/329501606_861780954887796_3406768361057614373_n.jpg?stp=dst-jpg_s1080x2048&_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_eui2=AeFR4dcggmi2aPbUVhNPY8KROJB2I_d9qEA4kHYj932oQJM81ciqeCSGiVgj2Zq3rnD_Bpo9ECv-1kwcx1POP5Ed&_nc_ohc=S_q9i_zDAroAX8coIM1&_nc_ht=scontent.fdac99-1.fna&oh=00_AfDKdkntu2lfbWe9W5azTpY_pdHqfBFvkZvj2uY6g4ak8w&oe=6417082F" class="img-responsive" alt=""></figure>
+           <h3><a href="">Mohamad Rifat Sarkar</a></h3>
+           <p>Web Developer</p>
+           <ul class="follow-us clearfix">
+             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+             <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+             <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+           </ul>
+         </div>
+      </li>
+      <li class="col-12 col-md-6 col-lg-3 mx-16">
+         <div class="cnt-block equal-hight" style="height: 349px;">
+           <figure><img src="https://fse.ewubd.edu/storage/app/uploads/public/62a/e17/2c4/62ae172c495a8183685862.jpg" class="img-responsive" alt=""></figure>
+           <h3><a href="">Dr. Mohammad Rezwanul Huq </a></h3>
+           <p>Supervisor</p>
+           <ul class="follow-us clearfix">
+             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+             <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+             <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+           </ul>
+         </div>
+      </li>
+     
+     </ul>
+   </div>
+ </section>
+     </div>
+     <!-- end Asked -->
+    <!-- contact testimonial-->
+
+    <div id="contact" class="contact">
+      <div class="align-bottom">  <h1 class="p-10">              If you have anything to ask please let us know</h1> </div>
+     
+        <div class="container">
+           <div class="row">
+              <div class="col-md-6">
+               <br> <br><br>
+                <figure class="w-70% px-3"><img src="{% static 'img/mail.png' %}" alt="#"/></figure>
+                 
+              </div>
+              <div class="col-md-6">
+                
+                 <form class="main_form" method="POST">
+                  {% csrf_token %}
+                    <div class="titlepage">
+                        <h2><span class="white">Contact</span> <span class="white">Us</span></h2>
+                     </div>
+                    <div class="row">
+                       <div class="col-sm-12">
+                          <input class="contactus" placeholder="Full Name" type="text" name="Name">
+                       </div>
+                       <div class="col-sm-12">
+                          <input class="contactus" placeholder="Email" type="text" name=" Email">
+                       </div>
+                       <div class="col-sm-12">
+                          <input class="contactus" placeholder="Subject" type="text" name="Subject">
+                       </div>
+                       <div class="col-sm-12">
+                          <textarea class="textarea" placeholder="Message" type="text" name="Message"></textarea>
+                       </div>
+                       <div class="col-sm-12">
+                          <button class="send" type="submit">Send</button>
+                       </div>
+                    </div>
+                 </form>
+              </div>
+           </div>
+        </div>
+     </div>
+     <!-- end contact -->
+     
+
+           <!-- Javascript files-->
+           
+           <script src="{% static 'js/jquery.min.js' %}"></script>
+           <script src="{% static 'js/popper.min.js' %}"></script>
+           <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+           <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+           <script src="{% static 'js/plugin.js ' %}"></script>
+           <!-- sidebar -->
+           <script src=" {% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+           <script src="{% static 'js/custom.js' %}"></script>
+           <script src="{% static 'js/owl.carousel.min.js ' %}"></script>
+           <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+           <script>
+              $(document).ready(function() {
+                var owl = $('.owl-carousel');
+                owl.owlCarousel({
+                  margin: 10,
+                  nav: true,
+                  loop: true,
+                  responsive: {
+                    0: {
+                      items: 1
+                    },
+                    600: {
+                      items: 2
+                    },
+                    1000: {
+                      items: 3
+                    }
+                  }
+                })
+              })
+           </script>
+           
+           <script>
+              $('.content').hide();
+              
+              $('.slider').click(function() {
+              $(this).next('.content').slideToggle();
+              this.toggle = !this.toggle;
+              $(this).children("span").text(this.toggle ? "-" : "+");
+              return false;
+              });
+           </script>
+
+
+       
+    </body>
+    
+    
+
+
+    
+</html>
+{% endblock %}
